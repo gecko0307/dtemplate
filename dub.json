@@ -1,0 +1,39 @@
+{
+    "name": "app",
+    "description": "My application",
+    "homepage": "https://github.com/gecko0307/dtemplate",
+    "license": "Boost",
+    "authors": [
+        "Timur Gafarov"
+    ],
+
+    "importPaths": [
+        "src"
+    ],
+
+    "dependencies": {
+		"dlib": "0.15.0"
+    },
+
+    "buildRequirements":[
+        "allowWarnings"
+    ],
+
+    "sourcePaths": ["src"],
+    "mainSourceFile": "src/main.d",
+
+    "configurations": [
+        {
+            "name": "application",
+            "targetType": "executable"
+        },
+        {
+            "name": "win32",
+            "targetType": "executable",
+            "platforms": ["windows"],
+            "lflags-windows-x86-dmd": ["/SUBSYSTEM:WINDOWS:5.01"],
+            "lflags-windows-x86_64-dmd": ["/SUBSYSTEM:WINDOWS", "/ENTRY:mainCRTStartup"],
+            "lflags-windows-x86_64-ldc": ["-SUBSYSTEM:WINDOWS", "-ENTRY:mainCRTStartup"]
+        }
+    ]
+}
