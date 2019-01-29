@@ -2,7 +2,7 @@
     "name": "app",
     "description": "My application",
     "homepage": "https://github.com/gecko0307/dtemplate",
-    "license": "Boost",
+    "license": "Unlicense",
     "authors": [
         "Timur Gafarov"
     ],
