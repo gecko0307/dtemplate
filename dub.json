@@ -12,7 +12,7 @@
     ],
 
     "dependencies": {
-		"dlib": "0.15.0"
+		"dlib": "0.16.0"
     },
 
     "buildRequirements":[
@@ -21,6 +21,14 @@
 
     "sourcePaths": ["src"],
     "mainSourceFile": "src/main.d",
+    
+    "postBuildCommands-windows-x86": [
+        "$PACKAGE_DIR\\rcedit\\rcedit-x86 \"$PACKAGE_DIR\\app.exe\" --set-file-version \"0.0.0.0\" --set-product-version \"0.0.0\" --set-icon \"$PACKAGE_DIR\\assets\\icon.ico\""
+    ],
+    
+    "postBuildCommands-windows-x86_64": [
+        "$PACKAGE_DIR\\rcedit\\rcedit-x64 \"$PACKAGE_DIR\\app.exe\" --set-file-version \"0.0.0.0\" --set-product-version \"0.0.0\" --set-icon \"$PACKAGE_DIR\\assets\\icon.ico\""
+    ],
 
     "configurations": [
         {
