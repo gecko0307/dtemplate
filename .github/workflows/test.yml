@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install dependencies
-      run: sudo snap install dmd dub
+      run: sudo snap install --classic dmd dub
     - name: Run dub test
       run: dub test
