@@ -8,7 +8,8 @@ on:
     - '.github/workflows/*'
 
 jobs:
-  build:
+  test:
+    name: Test on ${{ matrix.os }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
