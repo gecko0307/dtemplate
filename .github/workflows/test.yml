@@ -17,6 +17,5 @@ jobs:
       run: |
         sudo snap install --classic dmd
         sudo snap install --classic dub
-        sudo chown root /
     - name: Run dub test
-      run: dub test
+      run: sudo dub test
