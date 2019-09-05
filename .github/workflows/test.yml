@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install dependencies
       run: |
-        sudo apt-get update -qq
-        sudo apt-get install -yq dmd dub
+        snap install --classic dmd
+        snap install --classic dub
     - name: Run dub test
       run: dub test
